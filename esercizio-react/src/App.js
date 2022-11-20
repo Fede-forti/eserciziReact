@@ -1,11 +1,14 @@
 import './App.css';
 
-const hello  = <h1>Hello world!</h1>
+const name = 'Federica'
+const hello  = (name) => {
+  return <h1>Hello {name}</h1>
+}
 
 function App() {
   return (
     <div>
-      {hello}
+      {hello(name)}
       </div>
   );
 }

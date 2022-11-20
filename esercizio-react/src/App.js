@@ -8,7 +8,7 @@ const hello  = (name) => {
 function App() {
   return (
     <div>
-      {hello(name)}
+      {hello()}
       </div>
   );
 }

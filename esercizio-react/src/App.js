@@ -1,6 +1,6 @@
 import './App.css';
 
-const name = 'Federica'
+const name = 'Fede' + 'rica'
 const hello  = (name) => {
   return <h1>Hello {name}</h1>
 }
@@ -8,7 +8,7 @@ const hello  = (name) => {
 function App() {
   return (
     <div>
-      {hello()}
+      {hello(name)}
       </div>
   );
 }

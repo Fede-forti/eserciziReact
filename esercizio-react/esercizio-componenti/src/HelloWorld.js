@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import { NiceDay } from "./NiceDay";
 
 export class HelloWorld extends React.Component {
-    render(){
-        return <h1>Hello, world</h1>
-    }
+  render() {
+    return (
+      <div>
+        <h1>Hello, world</h1>
+        <NiceDay/>
+      </div>
+    );
+  }
 }
-
- 

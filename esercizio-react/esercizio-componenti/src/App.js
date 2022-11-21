@@ -1,13 +1,13 @@
 import React from "react";
-import { HelloWorld } from "./HelloWorld";
+import { Welcome } from "./Welcome";
 
 export class App extends React.Component {
-    render() {
-        return (
-            <div>
-                <h1>La mia app renderizzata</h1>
-                <HelloWorld/>
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div>
+        <h1>La mia app renderizzata</h1>
+        <Welcome name="Federica" />
+      </div>
+    );
+  }
 }

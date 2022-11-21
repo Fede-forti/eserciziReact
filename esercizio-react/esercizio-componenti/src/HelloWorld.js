@@ -1,5 +1,5 @@
 import React from "react";
-import { NiceDay } from "./NiceDay";
+import { Welcome } from "./Welcome";
 
 export class HelloWorld extends React.Component {
   render() {

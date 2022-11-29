@@ -4,25 +4,41 @@ import { Welcome } from './Welcome'
 export class InteractiveWelcome extends React.Component {
 
     state = {
-        username : ''
+        username : '',
+        password : '',
+        remember : false
     }
 
-    usernameInputChange = (event) => {
+    formInputChange = (event) => {
 
         const value = event.target.value
+        const name = event.target.name
 
         this.setState({
-            username : value,
+            [name] : value,
         })
         
     }
+
+    handleCheckboxChange = (event) => {
+        const name = event.target.name
+        const checked = event.target.checked
+
+        this.setState({
+            [name] : checked
+        })
+    }
+
+    
 
 
     render() {
         return (
             <div>
                 <Welcome name={this.state.username} />
-                <input name='username' value = {this.state.username} onChange={this.usernameInputChange}></input>
+                <input name='username' value = {this.state.username} onChange={this.formInputChange}></input>
+                <input name='password' type= 'password' value = {this.state.password} onChange={this.formInputChange}></input>
+                <input name='remember' type='checkbox' checked = {this.state.remember} onChange={this.handleCheckboxChange}></input>
             </div>
         )
     }

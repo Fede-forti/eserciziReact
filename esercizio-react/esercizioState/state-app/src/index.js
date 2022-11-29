@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom'
-import { ClickTracker } from './ClickTracker'
+import { InteractiveWelcome } from './InteractiveWelcome'
 
 
 
-ReactDOM.render(<ClickTracker />, document.querySelector('#root'))
+ReactDOM.render(<InteractiveWelcome />, document.querySelector('#root'))

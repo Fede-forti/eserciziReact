@@ -22,7 +22,7 @@ export class UncontrolledLogin extends React.Component{
                 <p>The Uncontrolled Form</p>
 
                 <form onSubmit={this.handleFormSubmit}>
-                    <input name='username'/>
+                    <input name='username' defaultValue='Federica'/>
                     <input name='password' type='password'/>
                     <input name='remember' type='checkbox'/>
 

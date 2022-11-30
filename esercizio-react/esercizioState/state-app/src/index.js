@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom'
 import './index.css'
-import { Welcome } from './Welcome'
+import { Login } from './Login'
 
 
 
-ReactDOM.render(<Welcome />, document.querySelector('#root'))
+ReactDOM.render(<Login />, document.querySelector('#root'))

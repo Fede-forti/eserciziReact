@@ -16,8 +16,16 @@ export class TodoList extends React.Component {
     let {names, todoValue} = this.state;
     names.push(todoValue)
     this.setState({ todoValue });
+    this.resetValue()
+
 
   };
+
+  resetValue = () => {
+    this.setState({
+        todoValue : ''
+    })
+  }
 
   render() {
     const items = this.state.names.map((name, index) => (
@@ -27,7 +35,7 @@ export class TodoList extends React.Component {
     return (
       <div>
         <ul>{items}</ul>
-        <input name="todoValue" value={this.state.todoValue} onChange={this.handleInputChange}></input>
+        <input name="todoValue" value={this.state.todoValue} onChange={this.handleInputChange} ></input>
         <button onClick={this.handleButtonClick}>Add name</button>
       </div>
     );

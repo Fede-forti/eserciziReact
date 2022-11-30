@@ -28,7 +28,7 @@ export class Login extends React.Component {
     }
 
     onLogin = () => {
-        // dalla traccia non capisco cosa deve fare questa funzione
+        console.log('Logging in')
     }
 
     render () {
@@ -38,7 +38,7 @@ export class Login extends React.Component {
                 <input name='username' value = {this.state.username} onChange={this.formInputChange}></input>
                 <input name='password' type= 'password' value = {this.state.password} onChange={this.formInputChange}></input>
                 <input name='remember' type='checkbox' checked = {this.state.remember} onChange={this.handleCheckboxChange}></input>
-                <button name='loginButton' disabled = {!this.state.username || !this.state.password} onClick={this.onLoginS}>Login</button>
+                <button name='loginButton' disabled = {!this.state.username || !this.state.password} onClick={this.onLogin}>Login</button>
             </div>
         )
     }

@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom'
-import { InteractiveWelcome } from './InteractiveWelcome'
+import { MyList } from './MyList'
 
 
 
-ReactDOM.render(<InteractiveWelcome />, document.querySelector('#root'))
+ReactDOM.render(<MyList />, document.querySelector('#root'))

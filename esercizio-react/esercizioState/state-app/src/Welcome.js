@@ -1,11 +1,12 @@
 import React from "react";
+import { Container } from "./Container";
 
 export class Welcome extends React.Component {
   render() {
     return (
-      <div className="welcome">
+      <Container>
         <p>Welcome, Federica</p>
-      </div>
+      </Container>
     );
   }
 }

@@ -34,7 +34,7 @@ export class TodoList extends React.Component {
   }
 
   handleRemoveItem = (event) => {
-
+    console.log(event.target.value)
 
     this.setState({
         names : this.state.names.filter(item => {
@@ -43,18 +43,9 @@ export class TodoList extends React.Component {
   }
 
   render() {
-    const items = this.state.names.map((name, index) => (
-      <li key={index}>{name}
-      <button value={name} onClick={this.handleRemoveItem}>Remove items</button>
-      </li>
-    ));
-
     return (
       <div>
-        <ul>{items}</ul>
-        <input name="todoValue" value={this.state.todoValue} onChange={this.handleInputChange} ></input>
-        <button onClick={this.handleButtonClick}>Add name</button>
-        <button onClick={this.handleResetArray}>Reset lista</button>
+        <h1>{this.props.render({ ...this.state, handleRemoveItem: this.handleRemoveItem })}</h1>
       </div>
     );
   }

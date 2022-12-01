@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom'
 import './index.css'
-import { Welcome } from './Welcome'
+import { MyList } from './MyList'
 
 
 
-ReactDOM.render(<Welcome />, document.querySelector('#root'))
+ReactDOM.render(<MyList />, document.querySelector('#root'))

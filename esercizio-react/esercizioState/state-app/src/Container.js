@@ -1,10 +1,16 @@
 import React from 'react'
 
 export class Container extends React.Component{
+
+    state = {
+        title: 'La mia applicazione',
+        id: 1
+    }
+
     render() {
         return (
             <div className='container'>
-                {this.props.children}
+                <div> {this.props.children(this.state.title)}</div>
             </div>
         )
     }

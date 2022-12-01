@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "./Container";
-import { LangueageContext } from "./LanguageContext ";
+import { DisplayLanguage } from "./LanguageContext ";
 
 export class Welcome extends React.Component {
 
@@ -21,13 +21,13 @@ handleLanguageChange = (event) => {
         <option value='en'>ENGLISH</option>
         <option value='it'>ITALIANO</option>
       </select>
-      <LangueageContext.Provider value={this.state.value}>
+      <DisplayLanguage.Provider value={this.state.value}>
         <Container> 
         {(title) => {
           return <h1> Il titolo è '{title}'</h1>
         }}
       </Container>
-      </LangueageContext.Provider>
+      </DisplayLanguage.Provider>
       
 
     </div>

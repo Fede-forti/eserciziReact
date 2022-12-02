@@ -1,8 +1,18 @@
 import React from "react";
-import { Container } from "./Container";
-import { DisplayLanguage } from "./LanguageContext ";
+import { HelloWorld } from "./HelloWorld";
 
-export class Welcome extends React.Component {
+
+export function Welcome(props) {
+  return (
+    <div>
+      {props.name ? <h2>Hello, {props.name}</h2> : <HelloWorld/>}
+      
+    </div>
+  )
+}
+
+
+/* export class Welcome extends React.Component {
 
 state = {
   language: 'en'
@@ -33,4 +43,4 @@ handleLanguageChange = (event) => {
     </div>
   )  
   }
-}
+} */

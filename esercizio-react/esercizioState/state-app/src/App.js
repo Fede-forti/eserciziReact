@@ -5,7 +5,7 @@ export class App extends React.Component{
     render() {
         return (
             <div>
-                <Sum a={3} b={15}/>
+                <Sum numbers={[3,15,2]}/>
             </div>
         )
     }

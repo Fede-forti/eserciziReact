@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom'
+import { ClickCounter } from './ClickCounter'
 
-import { Counter } from './Counter'
 
 
-ReactDOM.render(<Counter />, document.querySelector('#root'))
+ReactDOM.render(<ClickCounter />, document.querySelector('#root'))

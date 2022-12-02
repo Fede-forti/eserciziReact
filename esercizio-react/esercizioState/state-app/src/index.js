@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom'
-import { Greeting } from './Greeting'
+import { App } from './App'
 import './index.css'
 
 
 
-ReactDOM.render(<Greeting />, document.querySelector('#root'))
+ReactDOM.render(<App />, document.querySelector('#root'))

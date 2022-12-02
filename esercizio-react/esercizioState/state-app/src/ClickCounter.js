@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-export function ClickCounter({ initialValue = 0 }) {
+export function ClickCounter(props, { initialValue = 0 }) {
   const [counter, setCounter] = useState (initialValue)
+
+  useEffect(()=> {
+    props.onCounterChange(counter)
+  }, [counter, props]);
 
   function handleCounterIncrement() {
     setCounter((c) => {

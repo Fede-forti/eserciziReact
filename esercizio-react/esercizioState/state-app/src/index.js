@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom'
-import { ClickCounter } from './ClickCounter'
+import { App } from './App'
 
 
 
-ReactDOM.render(<ClickCounter />, document.querySelector('#root'))
+ReactDOM.render(<App />, document.querySelector('#root'))

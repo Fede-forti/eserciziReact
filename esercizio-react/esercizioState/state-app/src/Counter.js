@@ -20,13 +20,3 @@ export function Counter({ initialValue = 0 }) {
     </div>
    )
 }
-/* export class Counter extends React.Component {
-  render() {
-    return (
-      <div>
-        <ClickCounter counter={this.props.count} />
-      </div>
-    );
-  }
-}
- */

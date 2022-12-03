@@ -1,11 +1,11 @@
 import React from "react"; 
-import { FilteredList } from "./FilteredList";
+import { CarDetails } from "./CarDetails";
 
 export class App extends React.Component {
     render() {
         return (
             <div>
-                <FilteredList/>
+                <CarDetails initialData={{ model: "Fiat Panda", year: "2007", color: "Grey" }}/>
             </div>
         )
     }

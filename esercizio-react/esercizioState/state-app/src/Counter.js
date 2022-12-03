@@ -1,7 +1,26 @@
-import React from "react";
-import { ClickCounter } from "./ClickCounter";
+import React, { useState, useEffect } from "react";
 
-export class Counter extends React.Component {
+
+export function Counter({ initialValue = 0 }) {
+  const [counter, setCounter] = useState(initialValue);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCounter((c) => {
+        return c + 1
+      })}, 1000);
+
+      return () =>  clearInterval(interval) ;
+   }, [counter])
+
+
+   return (
+   <div>
+    <h1>{counter}</h1>
+    </div>
+   )
+}
+/* export class Counter extends React.Component {
   render() {
     return (
       <div>
@@ -10,3 +29,4 @@ export class Counter extends React.Component {
     );
   }
 }
+ */

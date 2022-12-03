@@ -1,12 +1,11 @@
 import React from "react"; 
-import { ClickCounter } from "./ClickCounter";
-import { Counter } from "./Counter";
+import { Githubuser } from "./GithubUser";
 
 export class App extends React.Component {
     render() {
         return (
             <div>
-                <Counter/>
+                <Githubuser username='Fede-forti'/>
                 {/* <ClickCounter onCounterChange= {(counter) => {
                     return console.log(`The count is ${counter}`)
                 }}/> */}

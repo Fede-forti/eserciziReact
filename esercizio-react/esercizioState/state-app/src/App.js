@@ -1,11 +1,11 @@
 import React from "react"; 
-import { ClickCounter } from "./ClickCounter";
+import { Form } from "./Form";
 
 export class App extends React.Component {
     render() {
         return (
             <div>
-                <ClickCounter/>
+                <Form/>
             </div>
         )
     }

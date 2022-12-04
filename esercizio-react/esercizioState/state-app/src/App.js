@@ -1,5 +1,5 @@
 import React from "react"; 
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Link } from "react-router-dom";
 import { Welcome } from "./Welcome";
 import { Counter } from "./Counter";
 import { ShowGithubUsers } from "./ShowGithubUsers";
@@ -14,6 +14,11 @@ export function App() {
                     <Route path="/Counter" element={<Counter/>}/>
                     <Route path="/users/:username" element={<ShowGithubUsers/>}/>
                 </Routes>
+
+                <div>
+                    <Link to="/">Welcome</Link> | <Link to="/Counter">Count</Link> | <Link to="/users/Fede-forti">User</Link>
+                </div>
+
             </div>
         )
     }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { GithubUser } from "./GithubUser";
 
-export default function GitHubUserList() {
+export function GithubUserList() {
   const [input, setInput] = useState("");
   const [array, setArray] = useState([]);
 

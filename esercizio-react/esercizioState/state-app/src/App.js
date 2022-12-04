@@ -3,7 +3,7 @@ import { Route, Routes, Link } from "react-router-dom";
 import { Welcome } from "./Welcome";
 import { Counter } from "./Counter";
 import { ShowGithubUsers } from "./ShowGithubUsers";
-import { GithubUserList } from "./GithubUserList"
+import { UseGithubUsers } from "./UseGithubUsers"
 
 export function App() {
 
@@ -14,9 +14,9 @@ export function App() {
                     <Route path="/" element={<Welcome name='Federica'/>}/>
                     <Route path="/Counter" element={<Counter/>}/>
                     
-                    <Route path="/users" element={<GithubUserList />}>
+                    <Route path="/users" element={<UseGithubUsers />}>
                         <Route path=":username" element={<ShowGithubUsers />} />
-                        <Route index element={<h2>Add a user and select it</h2>} />
+                        <Route index element={<h2>Add a user and select it</h2>} /> 
                     </Route>
                     
                     
@@ -30,7 +30,7 @@ export function App() {
                 </Routes>
 
                 <div>
-                    <Link to="/">Welcome</Link> | <Link to="/Counter">Count</Link> | <Link to="/users/Fede-forti">User</Link>
+                    <Link to="/">Welcome</Link> | <Link to="/Counter">Count</Link> | <Link to="/users/">User</Link>
                 </div>
 
             </div>

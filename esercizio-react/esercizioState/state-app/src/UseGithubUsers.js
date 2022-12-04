@@ -4,22 +4,35 @@ import useSWR from 'swr'
 const fetcher = url => fetch(url).then(response => response.json())
 
 export function UseGithubUsers(username) {
-    const { data, error } = useSWR(
+    const { data, error, mutate } = useSWR(
         username ? `https://api.github.com/users` : null, 
         fetcher )
-    
 
-  return (
-    <div>
-        { !data && !error && <h3>Loading</h3>}
-        { error && <h3>An error is occurred</h3>}
-        { data && !error && <ul>
-                {data.map(user => (
-                    <li key={user.login}>{user.login}</li>
-                )) }
-            </ul>}
-    </div>
-  )
-  
-  }
+    function handleRefetchUser(){
+        mutate()
+    }
+
+    return{
+        users: data,
+        error,
+        isLoading: !data && !error,
+        onRefresh: handleRefetchUser,
+    }
+}
+
+    export function GitHubUser({ username }) {
+        const { data, onRefresh } = UseGithubUsers(username);  
+        
+        return (
+                <div>
+                  <button onClick={onRefresh}>Refresh users</button>
+                  {data && (
+                    <div>
+                      <h1>{data.name}</h1>
+                      <img src={data.avatar_url} alt="user" className="avatar" />
+                    </div>
+                  )}
+                </div>
+              );
+            }
   
